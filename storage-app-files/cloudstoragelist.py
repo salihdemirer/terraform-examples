@@ -37,7 +37,7 @@ def main():
             # Get the bucket.
             bucket = client.get_bucket(bucket_name)
             # Lists all the blobs in the bucket.
-            blobs = bucket.list.blobs()
+            blobs = bucket.list_blobs()
             for blob in blobs:
                 print(" -", blob.name)
                 print("   size:",blob.size)
