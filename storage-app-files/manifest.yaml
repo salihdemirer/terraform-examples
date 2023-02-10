@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: demo-app-deployment
+  template:
+    metadata:
+      name: demo-app-deployment
+      labels:
+        name: demo-app-deployment
+    spec:
+      containers:
+        - name: demo-app-deployment
+          image: "gcr.io/terraform-project-377317/demo-app-image"
+      serviceAccountName: app-demo-salihdemirer
