@@ -8,17 +8,23 @@
 </ul>
 
 <h4>2 - Create two source code repo for the purposes below:</h4>
- - Docker app image repo
- - Kubernetes files repo
+<ul>
+ <li>Docker app image repo</li>
+ <li>Kubernetes files repo</li>
+</ul>
 
 <h4>3 - Edit terraform.tfvars file</h4>
 
 <h4>4 - Deploy Infra</h4>
-- terraform init
-- terraform plan
-- terraform apply
+<ul>
+ <li>terraform init</li>
+ <li>terraform plan</li>
+ <li>terraform apply</li>
+</ul>
 
 After these steps the user can push the codes to the desired repos.
 
 <h4>5 - Destroy Infra</h4>
-- terraform destroy (Put force_destroy to destroy the bucket.)
+<ul>
+ <li>terraform destroy (Put force_destroy to destroy the bucket.)</li>
+</ul>
