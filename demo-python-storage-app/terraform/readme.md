@@ -15,7 +15,9 @@
 
 <h4>3 - Edit terraform.tfvars file</h4>
 
-<h4>4 - Deploy Infra</h4>
+<h4>4 - Create a bucket for terraform backend and edit the bucket line in provider.tf</h4>
+
+<h4>5 - Deploy Infra</h4>
 <ul>
  <li>terraform init</li>
  <li>terraform plan</li>
@@ -24,7 +26,7 @@
 
 After these steps the user can push the codes to the desired repos.
 
-<h4>5 - Destroy Infra</h4>
+<h4>6 - Destroy Infra</h4>
 <ul>
  <li>terraform destroy (Put force_destroy to destroy the bucket.)</li>
 </ul>
