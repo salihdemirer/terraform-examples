@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app-deployment-salihdemirer
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: demo-app-deployment-salihdemirer
+  template:
+    metadata:
+      name: demo-app-deployment-salihdemirer
+      labels:
+        name: demo-app-deployment-salihdemirer
+    spec:
+      containers:
+        - name: demo-app-deployment-2
+          image: gcr.io/terraform-test-377408/demo-app-image:COMMIT_SHA
+          env:
+            - name: BUCKET_NAME
+              value: _BUCKET_NAME
+      serviceAccountName: app-demo-salihdemirer

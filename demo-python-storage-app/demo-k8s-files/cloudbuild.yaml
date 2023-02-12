@@ -1,0 +1,6 @@
+steps:
+  - name: 'gcr.io/cloud-builders/kubectl'
+    args: ['apply','-f','manifest.yaml']
+    env:
+      - 'CLOUDSDK_COMPUTE_REGION=$_LOCATION' # _LOCATION is for Cluster Location. Builder location is set to Global.
+      - 'CLOUDSDK_CONTAINER_CLUSTER=$_CLUSTER'
