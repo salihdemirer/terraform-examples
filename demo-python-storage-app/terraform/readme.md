@@ -5,7 +5,7 @@
  - Cloud Resource Manager API
  - Cloud Build API
 
-<h4>2 - Create two source code repo for the purposes below:<h2>
+<h4>2 - Create two source code repo for the purposes below:<h4>
  - Docker app image repo
  - Kubernetes files repo
 
