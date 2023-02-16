@@ -29,8 +29,8 @@ svc_acc_name = "###########"
 namespace    = "###########"
 
 # Definitions for Cloud Build
-location       = "###########" # Cloud Build location
-app_repo_name      = "###########"
-app_branch_name    = "###########"
-k8s_repo_name      = "###########"
-k8s_branch_name    = "###########"
+location        = "###########" # Cloud Build location
+app_repo_name   = "###########"
+app_branch_name = "###########"
+k8s_repo_name   = "###########"
+k8s_branch_name = "###########"

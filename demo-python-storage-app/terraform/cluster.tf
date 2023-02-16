@@ -22,14 +22,15 @@ module "kubernetes-engine_private-cluster" {
   master_ipv4_cidr_block     = var.master_ipv4_cidr_block
   create_service_account     = false
   service_account            = data.google_compute_default_service_account.default.email
+  grant_registry_access      = true
 
   node_pools = [
     {
       name            = "default-node-pool"
       machine_type    = "e2-small"
       node_locations  = "us-east1-b"
-      min_count       = 1
-      max_count       = 100
+      min_count       = 2
+      max_count       = 2
       local_ssd_count = 0
       spot            = true
       disk_size_gb    = 30
@@ -48,16 +49,11 @@ module "kubernetes-engine_private-cluster" {
       "https://www.googleapis.com/auth/logging.write",
       "https://www.googleapis.com/auth/monitoring",
       # Added extra scopes due to access container registry.
-      "https://www.googleapis.com/auth/devstorage.read_only",
-      "https://www.googleapis.com/auth/cloud-platform"
     ]
   }
 
   node_pools_labels = {
     all = {}
 
-    default-node-pool = {
-      default-node-pool = true
-    }
   }
 }

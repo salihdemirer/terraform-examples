@@ -30,8 +30,8 @@ resource "google_cloudbuild_trigger" "k8s_files_trigger" {
     repo_name   = var.k8s_repo_name
   }
   substitutions = {
-    "_LOCATION" = var.region # Location for K8S Cluster
-    "_CLUSTER" = var.cluster_name # K8S Cluster Name
+    "_LOCATION" = var.region       # Location for K8S Cluster
+    "_CLUSTER"  = var.cluster_name # K8S Cluster Name
   }
   filename = "cloudbuild.yaml"
 }
